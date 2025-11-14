@@ -5,7 +5,7 @@ const DreamJob = () => {
     return (
         <div className="flex items-center px-20">
             <div className="flex flex-col w-[45%] gap-4">
-                <div className="text-6xl font-bold leading-tight text-mine-shaft-200 [&>span]:text-emerald-400">
+                <div className="text-6xl font-semibold leading-tight text-mine-shaft-100 [&>span]:text-emerald-400">
                     Find The <span >Dream Job</span>  That Fit Your Life
                 </div>
                 <div className="text-mine-shaft-100 text-lg">
