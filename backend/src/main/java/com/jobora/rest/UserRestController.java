@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.jobora.custom.exception.JoboraException;
+import com.jobora.dto.LoginDTO;
 import com.jobora.dto.UserDTO;
 import com.jobora.service.UserService;
 
@@ -28,8 +30,14 @@ public class UserRestController {
 	}
 
 	@PostMapping("/register")
-	public ResponseEntity<UserDTO> registerUser(@RequestBody @Valid UserDTO userDto) {
+	public ResponseEntity<UserDTO> registerUser(@RequestBody @Valid UserDTO userDto) throws JoboraException {
 		UserDTO registerdUser = service.registerUser(userDto);
 		return new ResponseEntity<>(registerdUser, HttpStatus.CREATED);
+	}
+	
+	@PostMapping("/login")
+	public ResponseEntity<UserDTO> loginUser(@RequestBody  LoginDTO loginDto) throws JoboraException {
+		UserDTO logedUser = service.loginUser(loginDto);
+		return new ResponseEntity<>(logedUser, HttpStatus.OK);
 	}
 }

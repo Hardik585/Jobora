@@ -14,5 +14,12 @@ spring:
    properties:
      hibernate:
        format_sql: true
+
+  config:
+    import:
+           - classpath:messages.properties
+         
+
+
     
       
