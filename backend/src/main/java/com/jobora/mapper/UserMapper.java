@@ -9,7 +9,7 @@ import com.jobora.entity.UserEntity;
 public class UserMapper {
 
 	public UserDTO toDTO(UserEntity e) {
-		return new UserDTO(e.getId(), e.getName(), e.getEmail(), e.getPassword(), e.getAccountType());
+		return new UserDTO(e.getId(), e.getName(), e.getEmail(), e.getAccountType(), e.getPassword());
 	}
 
 	public UserEntity toEntity(UserDTO dto) {

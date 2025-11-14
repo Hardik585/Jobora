@@ -1,6 +1,9 @@
 package com.jobora.dto;
 
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,13 +16,18 @@ import lombok.ToString;
 public class UserDTO {
 
 	private Long id;
-	@NotBlank(message = "Name is null or blank")
+	@NotBlank(message = "{user.name.absent}")
 	private String name;
-	@NotBlank(message = "email is null or blank")
+	
+	@NotBlank(message = "{user.email.absent}")
+	@Email
 	private String email;
-	@NotBlank(message = "password is null or blank")
-	private String password;
-	@NotBlank(message = "Acccount type is null or blank")
+	
+	@NotNull(message = "{user.acctype.absent}")
 	private AccountyType accountType;
+	
+	@NotBlank(message = "{user.password.absent}")
+	@Pattern(regexp = "^(?=.*[A-Z])(?=.*[a-z])(?=.*[^A-Za-z0-9]).{5,16}$" , message ="{user.password.invalid}")
+	private String password;
 
 }
