@@ -11,7 +11,7 @@ const Header = () => {
                 <IconDevicesDollar stroke={1.5} className="w-15 h-15" />
                 <span className="font-semibold text-2xl">Jobora</span>
             </div>
-             {NavLinks()}
+            <NavLinks/>
             <div className="flex gap-3 items-center-safe">
                 <div className="flex gap-2 items-center">   
                     <div>Hardik</div>

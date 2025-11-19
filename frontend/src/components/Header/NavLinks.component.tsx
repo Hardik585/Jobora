@@ -13,7 +13,7 @@ const NavLinks = () => {
             {
                 links.map((link, index) =>
                     <div key={index} className={`${location.pathname == "/" + link.url ? "text-emerald-400 border-emerald-400" : "border-transparent"} border-t-[3px] h-full flex items-center`}>
-                        <Link key={index} to={link.url}>{link.name}</Link>
+                        <Link to={link.url}>{link.name}</Link>
                     </div>)
             }
         </div >

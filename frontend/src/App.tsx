@@ -1,9 +1,11 @@
 import './App.css'
-import '@mantine/core/styles.css';
 
 
 import { createTheme, MantineProvider } from '@mantine/core';
-import './App.css'
+import '@mantine/core/styles.css';
+import '@mantine/carousel/styles.css';
+
+
 import { BrowserRouter, Routes } from 'react-router-dom';
 import Home from './components/Home/Home.component';
 

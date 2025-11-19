@@ -1,15 +1,15 @@
 import Marquee from "react-fast-marquee";
 import { companies } from "../../Data/Data";
 
-const Companines = () => {
+const Companies = () => {
     return(
         <div className="mt-20 pb-5 ">
              <div className="text-4xl text-center font-semibold mb-10 text-mine-shaft-100 [&>span]:text-emerald-400">Trusted By <span>1000+</span> Companies</div>
            <Marquee pauseOnHover={true}>
                {
                 companies.map((company , index)=> 
-                    <div className="mx-8 px-2 py-1 hover:bg-mine-shaft-900 rounded-lg cursor-pointer" key={index}>
-                        <img className="h-15" src={`Companies/${company}.png`} alt="company" />
+                    <div className="mx-8 px-2 py-1 hover:bg-stone-900 rounded-xl cursor-pointer" key={index}>
+                        <img className="h-15" src={`/Companies/${company}.png`} alt="company" />
                     </div>
                 )
                }
@@ -18,4 +18,4 @@ const Companines = () => {
     )
 }
 
-export default Companines;
+export default Companies;
